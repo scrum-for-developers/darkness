@@ -38,6 +38,16 @@ public class StandardBookService implements BookService {
     }
 
     @Override
+    public List<Borrowing> getAllBooksByBorrower(String borrowerEmailAddress) {
+        return borrowingRepository.findBorrowingsByBorrower(borrowerEmailAddress);
+    }
+
+    @Override
+    public List<Borrowing> getAllBooksByBorrowerSorted(String borrowerEmailAddress) {
+        return borrowingRepository.findBorrowingsByBorrowerSorted(borrowerEmailAddress);
+    }
+
+    @Override
     public void borrowBook(Book book, String borrowerEmail) throws BookAlreadyBorrowedException {
         Borrowing borrowing = borrowingRepository.findBorrowingForBook(book);
         if (borrowing != null) {
