@@ -28,7 +28,7 @@ public class BookList {
         this.seleniumAdapter = seleniumAdapter;
     }
 
-    @Then("The booklist contains a book with values title <title>, author <author>, year <year>, edition <edition>, isbn <isbn>")
+    @Then("The booklist contains a book with values title <title>, author <author>, year <year>, edition <edition>, isbn <isbn>, desc <desc>")
     public void bookListContainsRowWithValues(@Named("title") final String title,
                                               @Named("author") final String author,
                                               @Named("year") final String year,

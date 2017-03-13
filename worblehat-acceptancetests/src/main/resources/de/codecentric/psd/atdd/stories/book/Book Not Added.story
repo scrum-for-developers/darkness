@@ -7,13 +7,13 @@ Scenario:
 
 Given an empty library
 
-When a librarian adds a book with title <title>, author <author>, edition <edition>, year <year> and isbn <isbn>
+When a librarian adds a book with title <title>, author <author>, edition <edition>, year <year>, isbn <isbn> and desc <desc>
 Then the page contains error message <message>
 And The library contains no books
 
 Examples:
  
-| isbn       | author           | title     |edition    | year  | message               |
-| 0XXXXXXXX5 | Terry Pratchett  | Sourcery  | 1         | 1989  | ISBN is invalid (numerical with 10 digits)     |
-| 0552131075 | Terry Pratchett  | Sourcery  | X         | 1989  | Edition should not be empty  |
+| isbn       | author           | title     |edition    | year  | message               | desc |
+| 0XXXXXXXX5 | Terry Pratchett  | Sourcery  | 1         | 1989  | ISBN is invalid (numerical with 10 digits)     | bla |
+| 0552131075 | Terry Pratchett  | Sourcery  | X         | 1989  | Edition should not be empty  | bla |
 

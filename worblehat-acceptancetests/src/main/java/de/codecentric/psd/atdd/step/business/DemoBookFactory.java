@@ -7,7 +7,7 @@ public class DemoBookFactory {
     private Book book;
 
     private DemoBookFactory(){
-        this.book = new Book("A book title", "A book author", "1", "1234567890", 2013);
+        this.book = new Book("A book title", "A book author", "1", "1234567890", 2013, "book description");
     }
 
     public static DemoBookFactory createDemoBook(){
