@@ -53,8 +53,4 @@ public class Borrowing implements Serializable {
 		// for JPA
 	}
 
-	public Date getReturnDate() {
-		return this.borrowDate;
-	}
-
 }
