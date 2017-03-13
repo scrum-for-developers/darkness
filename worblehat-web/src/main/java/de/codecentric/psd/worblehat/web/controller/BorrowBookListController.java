@@ -31,6 +31,7 @@ public class BorrowBookListController {
     @RequestMapping(method = RequestMethod.GET)
     public void prepareView(ModelMap modelMap) {
         modelMap.put("listBorrowedBooksFormData", new ReturnAllBooksFormData());
+        modelMap.addAttribute("borrowedBooks", null);
     }
 
     @RequestMapping(method = RequestMethod.POST)
