@@ -8,6 +8,8 @@ import org.springframework.context.event.EventListener;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+import java.net.URISyntaxException;
+
 @Service
 public class StartupMonitor {
 

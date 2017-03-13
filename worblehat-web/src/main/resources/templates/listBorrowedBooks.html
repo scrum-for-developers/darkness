@@ -4,7 +4,7 @@
     <title>List of borrowed books - Worblehat Bookmanager</title>
 </head>
 <body>
-<h1>Enter email address (Version 1.2)</h1>
+<h1>Enter email address</h1>
 
 <form th:object="${listBorrowedBooksFormData}" method="POST">
     Email Address:<input id="emailAddress" type="text" th:field="*{emailAddress}" />
@@ -26,5 +26,6 @@
 
 <hr />
 <a th:href="@{/}">Back to Home</a>
+<p>Version 1.2</p>
 </body>
 </html>
