@@ -34,14 +34,15 @@ public class InsertBook {
 	// *** W H E N *****
 	// *****************
 
-	@When("a librarian adds a book with title <title>, author <author>, edition <edition>, year <year> and isbn <isbn>")
+	@When("a librarian adds a book with title <title>, author <author>, edition <edition>, year <year>, isbn <isbn> and desc <desc>")
 	public void whenABookWithISBNisbnIsAdded(@Named("title") String title,
 											 @Named("author")String author,
 											 @Named("edition") String edition,
 											 @Named("year") String year,
-											 @Named("isbn") String isbn) {
+											 @Named("isbn") String isbn,
+											 @Named("desc") String desc) {
 		seleniumAdapter.gotoPage(Page.INSERTBOOKS);
-		fillInsertBookForm(title, author, edition, isbn, year);
+		fillInsertBookForm(title, author, edition, isbn, year, desc);
 		seleniumAdapter.clickOnPageElement(PageElement.ADDBOOKBUTTON);
 	}
 
@@ -61,12 +62,13 @@ public class InsertBook {
 
 
 	private void fillInsertBookForm(String title, String author, String edition, String isbn,
-			 String year) {
+			 String year, String desc) {
 		seleniumAdapter.typeIntoField("title", title);
 		seleniumAdapter.typeIntoField("edition", edition);
 		seleniumAdapter.typeIntoField("isbn", isbn);
 		seleniumAdapter.typeIntoField("author", author);
 		seleniumAdapter.typeIntoField("yearOfPublication", year);
+		seleniumAdapter.typeIntoField("desc", desc);
 	}
 
 
