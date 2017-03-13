@@ -19,7 +19,7 @@ public interface BookService {
 
 	List<Book> findAllBooks();
 
-	Book createBook(String title, String author, String edition, String isbn, int yearOfPublication);
+	Book createBook(String title, String author, String edition, String isbn, int yearOfPublication, String desc);
 
 	boolean bookExists(String isbn);
 

@@ -29,6 +29,9 @@ public class BookDataFormData {
 	@NotEmpty(message = "{empty.bookDataFormData.author}")
 	private String author;
 
+	@NotEmpty(message = "{empty.bookDataFormData.desc}")
+	private String desc;
+
 	public String getYearOfPublication() {
 		return yearOfPublication;
 	}
@@ -69,11 +72,15 @@ public class BookDataFormData {
 		this.edition = edition;
 	}
 
+	public String getDesc() { return desc; }
+
+	public void setDesc(String desc) { this.desc = desc; }
+
 	@Override
 	public String toString() {
 		return "BookDataFormData [title=" + title + ", edition=" + edition
 				+ ", yearOfPublication=" + yearOfPublication + ", isbn=" + isbn + ", author=" + author
-				+ "]";
+				+ ", desc=" + desc + "]";
 	}
 
 }
