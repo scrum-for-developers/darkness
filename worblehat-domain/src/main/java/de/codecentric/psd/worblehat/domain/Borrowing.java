@@ -45,8 +45,16 @@ public class Borrowing implements Serializable {
 		this.borrowDate = borrowDate.toDate();
 	}
 
+	public Book getBorrowedBook() {
+		return borrowedBook;
+	}
+
 	private Borrowing() {
 		// for JPA
+	}
+
+	public Date getReturnDate() {
+		return this.borrowDate;
 	}
 
 }
