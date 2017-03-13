@@ -33,7 +33,8 @@ public class BookList {
                                               @Named("author") final String author,
                                               @Named("year") final String year,
                                               @Named("edition") final String edition,
-                                              @Named("isbn") final String isbn){
+                                              @Named("isbn") final String isbn,
+                                              @Named("desc") final String desc){
         seleniumAdapter.gotoPage(Page.BOOKLIST);
         HtmlBookList htmlBookList = seleniumAdapter.getTableContent(PageElement.BOOKLIST);
         HtmlBook htmlBook = htmlBookList.getBookByIsbn(isbn);
