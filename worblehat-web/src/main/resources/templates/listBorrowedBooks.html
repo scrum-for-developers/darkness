@@ -14,6 +14,7 @@
 
 </form>
 
+<div th:if="${borrowedBooks} != null">
 <h1>List of borrowed books</h1>
 <table>
     <tr data-th-each="borrowedBook : ${borrowedBooks}">
@@ -21,6 +22,7 @@
         <td data-th-text="${borrowedBook.borrowedBook.title}">...</td>
     </tr>
 </table>
+</div>
 
 <hr />
 <a th:href="@{/}">Back to Home</a>
