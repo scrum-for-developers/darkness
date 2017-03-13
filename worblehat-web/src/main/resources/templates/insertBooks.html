@@ -3,7 +3,7 @@
 <title>Add Book - Worblehat Bookmanager</title>
 </head>
 <body>
-	<h1>Add Book (Version 1.2)</h1>
+	<h1>Add Book</h1>
 
 	<form th:object="${bookDataFormData}" method="POST">
 			Title:<input type="text" th:field="*{title}" />
@@ -24,6 +24,7 @@
 		<input type="submit" id="addBook" value="Add Book" />
 		<hr/>
 		<a th:href="@{/}">Back to Home</a>
+		<p>Version 1.2</p>
 	</form>
 
 
